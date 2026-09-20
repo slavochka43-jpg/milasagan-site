@@ -25,7 +25,7 @@
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@400;500;600;700;800&family=Prata&family=Marck+Script&display=swap');
 :root{
   --bg:#F5DABF;
   --paper:#fff8ef;
@@ -48,15 +48,18 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",-apple
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .wrap{width:min(1120px,calc(100% - 28px));margin:0 auto}
-.hero{min-height:95svh;display:flex;align-items:flex-end;padding:26px 0 42px}
-.hero-card{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-xl);padding:28px;box-shadow:var(--shadow)}
-.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:42px;text-align:center}
+.hero{min-height:82svh;display:flex;align-items:center;padding:60px 0}
+.hero .wrap{width:min(1060px,calc(100% - 48px))}
+.hero-card{width:100%;background:var(--paper);border:1px solid #e8d4bf;border-radius:32px;padding:60px 72px;box-shadow:0 12px 42px rgba(15,61,58,.025);container-type:inline-size}
+.hero .eyebrow{font-family:"Manrope",sans-serif;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#738078;margin-bottom:44px;text-align:center}
 h2,.case-display{font-family:"Prata",Georgia,"Times New Roman",serif;font-weight:400}
-.hero-title{margin:0 auto;max-width:900px;text-align:center;line-height:.92}
-.hero-title .first{display:block;font-family:"Prata",Georgia,serif;font-size:clamp(44px,8.6vw,98px);letter-spacing:-.045em;color:var(--green)}
-.hero-title .second{display:block;font-family:"Marck Script",cursive;font-size:clamp(58px,11.4vw,118px);color:var(--wine);margin-top:2px;line-height:.94}
-.hero-bottom{max-width:900px;margin:34px auto 0;padding-top:24px;border-top:1px solid var(--line);display:grid;gap:22px}
-.hero-copy{font-size:19px;max-width:720px;color:#314b46;margin:0 auto;text-align:center}
+.hero-title{margin:0 auto;max-width:780px;text-align:center;font-weight:400}
+.hero-title .first{display:block;font-family:"Forum",Georgia,serif;font-weight:400;font-size:clamp(72px,6vw,86px);line-height:1;letter-spacing:-.02em;color:var(--green)}
+.hero-title .second{display:block;font-family:"Marck Script",cursive;font-weight:400;font-size:clamp(78px,6.5vw,94px);letter-spacing:normal;color:var(--wine);margin-top:-8px;line-height:1}
+.hero-bottom{max-width:740px;margin:44px auto 0;padding-top:28px;border-top:1px solid #eaddce;display:grid;gap:26px}
+.hero-copy{font-size:18px;font-weight:400;line-height:1.5;max-width:680px;color:#405b54;margin:0 auto;text-align:center}
+.hero .btn{min-height:50px;padding:0 22px;font-family:"Manrope",sans-serif;font-weight:600;font-size:14px;box-shadow:none}
+.hero .actions{gap:12px}
 .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:999px;border:1px solid var(--green);color:var(--green);font-weight:700;font-size:15px;transition:.2s ease;background:rgba(255,248,239,.35)}
 .btn:hover{transform:translateY(-1px)}
@@ -99,11 +102,10 @@ h2{font-size:clamp(36px,6vw,66px);line-height:.96;letter-spacing:-.03em;margin:0
 .footer a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 @media (max-width:780px){
   .wrap{width:min(100% - 18px,1120px)}
-  .hero{min-height:88svh;padding:10px 0 18px}
-  .hero-card{padding:20px;border-radius:26px}
-  .eyebrow{margin-bottom:30px}
-  .hero-title .first{font-size:clamp(44px,12vw,70px)}
-  .hero-title .second{font-size:clamp(54px,16vw,88px)}
+  .hero{min-height:82svh;padding:50px 0}
+  .hero-card{padding:48px 40px}
+  .hero-title .first{font-size:min(clamp(58px,8.6vw,70px),14.4cqi)}
+  .hero-title .second{font-size:min(clamp(68px,10vw,80px),13.6cqi);margin-top:-6px}
   .hero-copy{font-size:17px}
   .section{padding:56px 0}
   .section-head{display:block}
@@ -116,6 +118,18 @@ h2{font-size:clamp(36px,6vw,66px);line-height:.96;letter-spacing:-.03em;margin:0
   .cta-copy .btn{margin-top:20px;width:100%}
   .footer{display:block}
   .footer div+div{margin-top:10px}
+}
+@media (max-width:520px){
+  .hero{min-height:auto;padding:32px 0}
+  .hero .wrap{width:calc(100% - 28px)}
+  .hero-card{padding:32px 28px;border-radius:28px}
+  .hero .eyebrow{margin-bottom:40px}
+  .hero-title .first{font-size:clamp(30px,14.4cqi,56px);white-space:nowrap}
+  .hero-title .second{font-size:clamp(32px,13.6cqi,68px);margin-top:0;white-space:nowrap}
+  .hero-bottom{margin-top:40px;padding-top:28px;gap:24px}
+  .hero-copy{font-size:16px}
+  .hero .actions{flex-direction:column;align-items:center;gap:10px}
+  .hero .btn{min-height:48px;min-width:174px}
 }
 </style>
 </head>
